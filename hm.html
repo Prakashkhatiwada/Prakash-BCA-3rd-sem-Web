@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Management System</title>
+    
+</head>
+<style>
+    
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #9aa3ec;
+    border: 1px solid #021894;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+h1, h2 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.add-room-form, .room-list, .update-room-form, .delete-room-form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input[type="number"], input[type="text"], select {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #3e8e41;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #02008d;
+}
+</style>
+<body>
+    
+    <div class="container">
+
+        <h1> A Simple Hotel Management System</h1>
+        <img src="rupakot.jpg" alt="hotel" width="800" height="500">
+        <div class="add-room-form">
+            <h2>Add Room</h2>
+            <form id="add-room-form">
+                <label for="room-number">Room Number:</label>
+                <input type="number" id="room-number" name="room-number"><br><br>
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" name="room-type">
+                    <option value="Single">Single</option>
+                    <option value="Double">Double</option>
+                    <option value="Suite">Suite</option>
+                    <option value="Suite">VIP</option>
+                    <option value="Suite">Delux Room</option>
+                    
+                </select><br><br>
+                <label for="room-price">Room Price:</label>
+                <input type="number" id="room-price" name="room-price"><br><br>
+                <input type="submit" value="Add Room">
+            </form>
+        </div>
+        <div class="room-list">
+            <img src="prakash-gallery.jpg" alt="hotel" width="190" height="150">
+            <img src="galllary.ab.jpg" alt="hotel" width="190" height="150">
+            <img src="images.jfif" alt="hotel" width="190" height="150">
+            <img src="download.jfif" alt="hotel" width="190" height="150">
+            <h2>Room List</h2>
+
+            <table id="room-table">
+                <thead>
+                    <tr>
+                        <th>Room Number</th>
+                        <th>Room Type</th>
+                        <th>Room Price</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody id="room-tbody"></tbody>
+            </table>
+        </div>
+        <div class="update-room-form">
+            <h2>Update Room</h2>
+            <form id="update-room-form">
+                <label for="update-room-number">Room Number:</label>
+                <input type="number" id="update-room-number" name="update-room-number"><br><br>
+                <label for="update-room-type">Room Type:</label>
+                <select id="update-room-type" name="update-room-type">
+                    <option value="Single">Single</option>
+                    <option value="Double">Double</option>
+                    <option value="Suite">Suite</option>
+                </select><br><br>
+                <label for="update-room-price">Room Price:</label>
+                <input type="number" id="update-room-price" name="update-room-price"><br><br>
+                <input type="submit" value="Update Room">
+            </form>
+        </div>
+        <div class="delete-room-form">
+            <h2>Delete Room</h2>
+            <form id="delete-room-form">
+                <label for="delete-room-number">Room Number:</label>
+                <input type="number" id="delete-room-number" name="delete-room-number"><br><br>
+                <input type="submit" value="Delete Room">
+            </form>
+        </div>
+    </div>
+
+    
+</body>
+</html>
+
+
+
